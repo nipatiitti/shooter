@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
- 
+
+[AddComponentMenu("Movement/PlayerMovement")]
 [RequireComponent(typeof(CharacterController))]
 public class playerMovement : MonoBehaviour
 {
