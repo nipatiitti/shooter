@@ -220,3 +220,8 @@ MonoBehaviour:
   shellVelocity: 3
   TTLBullet: 2
   TTLShell: 10
+  bullets: 30
+  perClip: 5
+  bulletsOnGun: 0
+  reloadTime: 4
+  timeBetweenShots: 0.33

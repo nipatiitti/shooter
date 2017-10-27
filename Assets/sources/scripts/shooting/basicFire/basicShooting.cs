@@ -17,10 +17,53 @@ public class basicShooting : MonoBehaviour {
     public float TTLBullet;
     public float TTLShell;
 
+    public int bullets;
+    public int perClip;
+    public int bulletsOnGun;
+
+    public float reloadTime;
+
+    public float timeBetweenShots;
+    private float readyToShoot;
+
+    void Start()
+    {
+        if (bullets-perClip >= 0)
+        {
+            bulletsOnGun = perClip;
+            bullets = bullets - perClip + bulletsOnGun;
+        } else
+        {
+            bulletsOnGun = bullets;
+        }
+        
+        
+    }
+
     void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
-            Fire();
+            if(bulletsOnGun > 0 && Time.time >= readyToShoot)
+            {
+                Fire();
+                bulletsOnGun--;
+                readyToShoot = Time.time + timeBetweenShots;
+            }
+        }
+
+        if (Input.GetButtonDown("Reload"))
+        {
+            if (bullets - perClip >= 0)
+            {
+                bullets = bullets - perClip + bulletsOnGun;
+                bulletsOnGun = perClip;
+            }
+            else
+            {
+                bulletsOnGun = bullets;
+                bullets = 0;
+            }
+            readyToShoot = Time.time + reloadTime;
         }
     }
 
