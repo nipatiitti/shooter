@@ -36,6 +36,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4435329564015062}
+  - component: {fileID: 54069808378767666}
+  - component: {fileID: 65994505280266932}
+  - component: {fileID: 114639057076078944}
   - component: {fileID: 114275618094845498}
   m_Layer: 0
   m_Name: BasicPistol
@@ -122,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146464758766490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.625, y: -0.048, z: 0.804}
+  m_LocalPosition: {x: 2.8749046, y: 5.563487e-18, z: -3.6613538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4104502869432300}
@@ -199,6 +202,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117410685160430}
   m_Mesh: {fileID: 4300000, guid: 12a1eaf92b87f334fbbbe6c58d55b30e, type: 3}
+--- !u!54 &54069808378767666
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146464758766490}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65994505280266932
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146464758766490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14342336, y: 0.35614416, z: 0.49202967}
+  m_Center: {x: -0.009960637, y: 0.16612028, z: -0.06474137}
 --- !u!114 &114275618094845498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,5 +253,17 @@ MonoBehaviour:
   bullets: 30
   perClip: 5
   bulletsOnGun: 0
-  reloadTime: 4
+  reloadTime: 2
   timeBetweenShots: 0.33
+--- !u!114 &114639057076078944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146464758766490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8263b4555d3ee41b504a23ea3967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShoot: 1

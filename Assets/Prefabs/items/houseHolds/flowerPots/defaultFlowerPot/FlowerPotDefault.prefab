@@ -73,9 +73,10 @@ GameObject:
   - component: {fileID: 65940065296133494}
   - component: {fileID: 65374540927847368}
   - component: {fileID: 65466235132845034}
+  - component: {fileID: 114348219752800748}
   m_Layer: 0
   m_Name: FlowerPot
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,9 +91,10 @@ GameObject:
   - component: {fileID: 4843389225370258}
   - component: {fileID: 54696194496133870}
   - component: {fileID: 64091876399689388}
+  - component: {fileID: 114344981300105120}
   m_Layer: 0
   m_Name: FlowerWoLeaf
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,3 +342,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22889543, y: 0.47668147, z: 0.07247877}
   m_Center: {x: 0.022946358, y: 0.2097522, z: 0.12359035}
+--- !u!114 &114344981300105120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955176945103614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8263b4555d3ee41b504a23ea3967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShoot: 0
+--- !u!114 &114348219752800748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662505925381204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8263b4555d3ee41b504a23ea3967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShoot: 0

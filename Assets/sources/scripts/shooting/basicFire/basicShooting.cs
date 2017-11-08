@@ -26,6 +26,18 @@ public class basicShooting : MonoBehaviour {
     public float timeBetweenShots;
     private float readyToShoot;
 
+    public int[] getBullets()
+    {
+        int[] data = { bullets, bulletsOnGun };
+        return data;
+    }
+
+    public void setBullets(int bullets, int bulletsOnGun)
+    {
+        this.bullets = bullets;
+        this.bulletsOnGun = bulletsOnGun;
+    }
+
     void Start()
     {
         if (bullets-perClip >= 0)
@@ -41,7 +53,7 @@ public class basicShooting : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && transform.IsChildOf(GameObject.Find("gunController").transform))
         {
             if(bulletsOnGun > 0 && Time.time >= readyToShoot)
             {
