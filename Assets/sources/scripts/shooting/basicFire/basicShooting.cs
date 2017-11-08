@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [AddComponentMenu("Shooting/Basic shooting")]
 public class basicShooting : MonoBehaviour {
@@ -26,6 +27,8 @@ public class basicShooting : MonoBehaviour {
     public float timeBetweenShots;
     private float readyToShoot;
 
+    Image reload;
+
     public int[] getBullets()
     {
         int[] data = { bullets, bulletsOnGun };
@@ -48,11 +51,13 @@ public class basicShooting : MonoBehaviour {
         {
             bulletsOnGun = bullets;
         }
-        
+        reload = GameObject.Find("reload").GetComponent<Image>();
+
         
     }
 
     void Update () {
+        reload.fillAmount = (readyToShoot - Time.time) / reloadTime;
         if (Input.GetButtonDown("Fire1") && transform.IsChildOf(GameObject.Find("gunController").transform))
         {
             if(bulletsOnGun > 0 && Time.time >= readyToShoot)
